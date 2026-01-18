@@ -1,0 +1,132 @@
+/* Kali MCP - Layout Utilities */
+
+/* Containers */
+.app-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-app);
+    overflow: hidden;
+}
+
+.main-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    gap: var(--space-md);
+    padding: var(--space-md);
+}
+
+/* Panel/Surface Classes */
+/* Panel/Surface Classes */
+.panel {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    /* FIX: Removed overflow: hidden to prevent clipping of animated content */
+    overflow: visible;
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: var(--space-md);
+    transition: background-color var(--duration-short) var(--ease-smooth);
+}
+
+/* ... Flex Utilities ... */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-1 {
+    flex: 1;
+    min-height: 0;
+    /* FIX: Prevent flex items from overflowing parent */
+}
+
+/* ... (Existing Spacing) ... */
+
+/* Animations - Repair */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn var(--duration-medium) var(--ease-smooth) forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp var(--duration-medium) var(--ease-smooth) forwards;
+    /* Safety: Ensure it's block display so it paints */
+    will-change: transform, opacity;
+}
+
+.animate-slide-right {
+    animation: slideRight var(--duration-medium) var(--ease-smooth) forwards;
+}
+
+/* Stagger Delays */
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+/* Interactive Hover Smoothness */
+.hover-scale {
+    transition: transform var(--duration-short) var(--ease-smooth), background-color var(--duration-short) var(--ease-smooth);
+}
+
+.hover-scale:hover {
+    transform: scale(1.01);
+}

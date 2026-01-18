@@ -1,0 +1,23 @@
+{
+  "name": "kali-mcp-browser",
+  "version": "0.1.0",
+  "description": "Browser controller for Kali MCP Toolkit",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@vitest/coverage-v8": "^4.0.16",
+    "fast-check": "^3.14.0",
+    "typescript": "^5.3.0",
+    "vitest": "^4.0.16"
+  }
+}

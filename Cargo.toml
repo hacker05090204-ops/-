@@ -1,0 +1,37 @@
+[package]
+name = "kali-mcp-core"
+version = "0.1.0"
+edition = "2021"
+description = "High-performance core components for Kali MCP Toolkit"
+license = "MIT"
+
+[lib]
+name = "kali_mcp_core"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+async-trait = "0.1"
+thiserror = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+sha2 = "0.10"
+hex = "0.4"
+parking_lot = "0.12"
+dashmap = "5.5"
+crossbeam-channel = "0.5"
+rayon = "1.8"
+pyo3 = { version = "0.22", features = ["extension-module"] }
+
+[dev-dependencies]
+quickcheck = "1.0"
+quickcheck_macros = "1.0"
+proptest = "1.4"
+criterion = "0.5"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3

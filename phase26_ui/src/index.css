@@ -1,0 +1,10 @@
+@import './styles/variables.css';
+@import './styles/reset.css';
+@import './styles/typography.css';
+@import './styles/layout.css';
+
+/* Global styles that don't fit in modules */
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+}

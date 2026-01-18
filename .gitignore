@@ -1,0 +1,24 @@
+# Node
+node_modules/
+dist/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.hypothesis/
+
+# Rust
+target/
+**/*.rs.bk
+
+# Misc
+.DS_Store
+.idea/
+.vscode/
+*.log
+/artifacts/
+/test_artifacts/
+*$$$*
