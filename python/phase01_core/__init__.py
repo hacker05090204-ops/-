@@ -1,0 +1,52 @@
+"""
+PHASE 01 — CORE CONSTANTS PACKAGE
+2026 RE-IMPLEMENTATION
+
+This package provides foundational constants for the kali-mcp-toolkit system.
+
+⚠️ CRITICAL NOTICE:
+    This is a 2026 RE-IMPLEMENTATION.
+    This is NOT a recovery of lost code.
+
+Usage:
+    from phase01_core import SYSTEM_ID, INVARIANT_HUMAN_AUTHORITY
+"""
+
+from phase01_core.constants import (
+    # System Identity
+    SYSTEM_ID,
+    SYSTEM_NAME,
+    REIMPLEMENTATION_DATE,
+    # Version
+    VERSION,
+    VERSION_TUPLE,
+    # Core Invariants
+    INVARIANT_HUMAN_AUTHORITY,
+    INVARIANT_NO_AUTO_EXPLOIT,
+    INVARIANT_AUDIT_REQUIRED,
+    INVARIANT_NO_SCORING,
+    # Security Constants
+    MAX_OPERATION_TIMEOUT_SECONDS,
+    REQUIRE_HUMAN_CONFIRMATION,
+    # Governance Markers
+    GOVERNANCE_VERSION,
+    REIMPLEMENTATION_MARKER,
+)
+
+__all__ = [
+    "SYSTEM_ID",
+    "SYSTEM_NAME",
+    "REIMPLEMENTATION_DATE",
+    "VERSION",
+    "VERSION_TUPLE",
+    "INVARIANT_HUMAN_AUTHORITY",
+    "INVARIANT_NO_AUTO_EXPLOIT",
+    "INVARIANT_AUDIT_REQUIRED",
+    "INVARIANT_NO_SCORING",
+    "MAX_OPERATION_TIMEOUT_SECONDS",
+    "REQUIRE_HUMAN_CONFIRMATION",
+    "GOVERNANCE_VERSION",
+    "REIMPLEMENTATION_MARKER",
+]
+
+__version__ = VERSION
